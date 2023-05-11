@@ -15,6 +15,6 @@ App.use(notesRoutes)
 
 
 
-App.listen(process.env.PORTAPP||3004,()=>{
+App.listen(process.env.PORT||3004,()=>{
     console.log("server is listening")
 })
