@@ -2,11 +2,11 @@ import {createPool} from "mysql2/promise"
 
 
  const pool = createPool({
-    host: process.env.HOST || 'localhost',
-    user: process.env.USER,
-    password: process.env.PASSWORD,
-    port: process.env.PORTDB || 3306,
-    database: process.env.DATABASE 
+    host: process.env.MYSQLHOST || 'localhost',
+    user: process.env.MYSQLUSER || 'root',
+    password: process.env.MYSQLPASSWORD || 'Golem100@',
+    port: process.env.MYSQLPORT || 3306,
+    database: process.env.MYSQLDATABASE || 'todoapp' 
 })
 
 export default pool
