@@ -25,3 +25,13 @@ export const createNote = async (req,res)=>{
 }
 
 
+export const deleteNote = async(req,res)=>{
+const [rows] = await pool.query('SELECT * FROM users WHERE id = ? AND password = ?',[req.params.created_by,req.params.password])
+
+    if(rows.length > 0){
+       const info = await pool.query('DELETE FROM notes WHERE id = ?',[req.params.id])
+       res.send({res : "nota eliminada"})
+    }else{
+        res.send({res:"err"})
+    }
+}

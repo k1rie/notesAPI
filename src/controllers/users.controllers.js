@@ -18,7 +18,7 @@ export const loginUser = async (req,res)=>{
             })   
         }
     } catch (error) {
-
+res.send(error)
     }
     }
 
